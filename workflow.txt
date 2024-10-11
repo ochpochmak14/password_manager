@@ -1,0 +1,25 @@
+            LOG:
+1.User opens the app
+
+2.User choose {Sign in} or {Sign up}
+3.If {Sign in} -> {name, password} (basic)
+4.else {name,password,secret code} 
+
+
+            UX/UI:
+1.User can see his passwords with titles
+2.User can see buttons {add password} and {generate password}
+
+3.if {add password} -> new window with {app},{title},{password} -> after filling the gaps line will      
+                                                                            appear in the table of pswds
+4.else you fill {app}, {title} then you see line on the table of pswds
+
+5.If {copy} -> your password will only copy
+6.if {update} -> you fill {app}, {title}, {password}, {secret code}
+7.if {delete} -> you fill only {password (from account)},{secret code}
+8.if {look} -> you fill {secret code} then you will see psw
+
+
+            Features(IF (🎈) -> included in app else no):
+1.If the IP is diff.(after SIGN IN) programm will ask about {secret code}
+2.password in the table won't be able to see to anyone(e.g ********)
