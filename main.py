@@ -1,7 +1,18 @@
 import tkinter as tk
+from window_settings import *
 
-win = tk.Tk()
 
-win.title('🔑Password Manager🔑')
+def main():
+    my_window = tk.Tk()
 
-win.mainloop()
+    settings(my_window)
+    start(my_window)
+   
+
+if(__name__ == "__main__"):
+    main()
+        
+        
+        
+        
+        
