@@ -8,7 +8,3 @@ def set_buttons(window):
     buttonsignin.grid(row=4, column=4)  
     buttonsignup.grid(column=4, row=3)
 
-    
-def submit_button(window):
-    button_sub = tk.Button(window, text='Submit')
-    button_sub.grid(row=5, column=4)

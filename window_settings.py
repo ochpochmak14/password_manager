@@ -1,5 +1,4 @@
 import tkinter as tk
-from buttons import set_buttons
 
 def settings(window):
     icon = tk.PhotoImage(file="resources\icn.png")  
@@ -14,6 +13,7 @@ def settings(window):
 
 def f(window):
     
+    from buttons import set_buttons
     window.columnconfigure(0,weight = 1)
     window.columnconfigure(1,weight = 1)
     window.columnconfigure(2,weight = 1)
