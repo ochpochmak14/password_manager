@@ -52,7 +52,7 @@ def signup_handler(btn1, btn2, window):
    secret_code_entry.insert(0, 'Enter secret code')
    secret_code_entry.grid(column=4, row=4)
    
-   button_sub = tk.Button(window, text='Submit')
+   button_sub = tk.Button(window, text='Submit', command=lambda:signup_text_handling(user_name,user_password,secret_code_entry,back_button,button_sub,name_label,pass_label,secret_code,window))
    button_sub.grid(row=5, column=4)
    
    back_button = tk.Button(window, text='Back', command=lambda:main_menu(user_name,secret_code_entry,
@@ -61,5 +61,9 @@ def signup_handler(btn1, btn2, window):
    back_button.grid(column=1, row=1)
    
 
+def signup_text_handling(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
    
+   main_menu(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window)
+   enter_label = tk.Label(window, text='Now you can sign in in your cabinet', fg='red')
+   enter_label.grid(row=1, column=4, rowspan=2)
     
