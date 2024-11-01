@@ -1,7 +1,6 @@
 import tkinter as tk
 
 
-
 def main_menu(e1,e2,e3,btn1,btn2,lb1,lb2,lb3, window):
    
    from buttons import set_buttons
@@ -52,6 +51,7 @@ def signup_handler(btn1, btn2, window):
    secret_code_entry.insert(0, 'Enter secret code')
    secret_code_entry.grid(column=4, row=4)
    
+   
    button_sub = tk.Button(window, text='Submit', command=lambda:signup_text_handling(user_name,user_password,secret_code_entry,back_button,button_sub,name_label,pass_label,secret_code,window))
    button_sub.grid(row=5, column=4)
    
@@ -62,8 +62,17 @@ def signup_handler(btn1, btn2, window):
    
 
 def signup_text_handling(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
+   import psycopg2
+   from db_connect import db_connect
    
-   main_menu(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window)
-   enter_label = tk.Label(window, text='Now you can sign in in your cabinet', fg='red')
-   enter_label.grid(row=1, column=4, rowspan=2)
-    
+   usn = str(e1.get())
+   usp = str(e2.get())
+   scs = str(e3.get())
+   
+   connection = db_connect()
+   sql1 = """INSERT INTO users (user_name, user_password, user_secretcode) VALUES (%s, %s, %s)"""
+   dt = (usn, usp, scs)
+   with connection.cursor() as cursor:
+      cursor.execute(sql1, dt)
+   
+   connection.commit()
