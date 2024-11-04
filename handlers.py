@@ -22,10 +22,9 @@ def signin_handler(btn1, btn2, window):
    btn1.after(0, btn1.destroy)
    btn2.after(0, btn2.destroy) 
    
-   
-    
     
 def signup_handler(btn1, btn2, window):
+   from text_handlers import signup_text_handling
    btn1.after(0, btn1.destroy)
    btn2.after(0, btn2.destroy)
 
@@ -61,18 +60,35 @@ def signup_handler(btn1, btn2, window):
    back_button.grid(column=1, row=1)
    
 
-def signup_text_handling(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
-   import psycopg2
-   from db_connect import db_connect
+# def signup_text_handling(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
+#    import psycopg2
+#    from db_connect import db_connect
    
-   usn = str(e1.get())
-   usp = str(e2.get())
-   scs = str(e3.get())
+#    usn = str(e1.get())
+#    usp = str(e2.get())
+#    scs = str(e3.get())
+#    is_ok = True
+#    try:
+#       if usn != '' and usp != '' and scs != '0':
+#          connection = db_connect()
+#          sql1 = """INSERT INTO users (user_name, user_password, user_secretcode) VALUES (%s, %s, %s)"""
+#          dt = (usn, usp, scs)
+#          with connection.cursor() as cursor:
+#             cursor.execute(sql1, dt)
+         
+#          connection.commit()
+#          main_menu(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window)
+#       else:
+#          is_ok = False
+#          warn = tk.Label(window,text='CHECK YOUR USER NAME AND PASSWORD AGAIN', fg='red')
+#          warn.grid(row=1, column=4)
+#          # signup_text_handling(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window)
+#    except Exception:
+#       is_ok = False
+#       warn = tk.Label(window,text='CHECK YOUR USER NAME AND PASSWORD AGAIN', fg='red')
+#       warn.grid(row=1, column=4)
    
-   connection = db_connect()
-   sql1 = """INSERT INTO users (user_name, user_password, user_secretcode) VALUES (%s, %s, %s)"""
-   dt = (usn, usp, scs)
-   with connection.cursor() as cursor:
-      cursor.execute(sql1, dt)
-   
-   connection.commit()
+#    if is_ok:
+#       main_menu(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window)
+#       success = tk.Label(window, text='NOW YOU CAN SIGN IN!', fg='green')
+#       success.grid(row=1, column=4)
