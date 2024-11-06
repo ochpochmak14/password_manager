@@ -18,7 +18,7 @@ def main_menu(e1, e2, e3, btn1, btn2, lb1, lb2, lb3, window):
 
 
 def signin_handler(btn1, btn2, window):
-    from text_handlers import signin_text_handler, signup_text_handling
+    from handlers.text_handlers import signin_text_handler, signup_text_handling
 
     btn1.after(0, btn1.destroy)
     btn2.after(0, btn2.destroy)
@@ -77,7 +77,7 @@ def signin_handler(btn1, btn2, window):
 
 
 def signup_handler(btn1, btn2, window):
-    from text_handlers import signup_text_handling
+    from handlers.text_handlers import signup_text_handling
 
     btn1.after(0, btn1.destroy)
     btn2.after(0, btn2.destroy)
