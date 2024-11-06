@@ -1,10 +1,10 @@
 import tkinter as tk
 
-def signin_text_handler(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
+def signin_text_handler(e1,e2,btn1,btn2,lb1,lb2,lb3,window):
    usn = str(e1.get())
    usp = str(e2.get())
-   scs = str(e3.get())
    
+
 
 
 
@@ -15,7 +15,6 @@ def signin_text_handler(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
 def signup_text_handling(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
    from db_connect import db_connect
    from handlers import main_menu
-   
    global warn
    usn = str(e1.get())
    usp = str(e2.get())
@@ -37,11 +36,11 @@ def signup_text_handling(e1,e2,e3,btn1,btn2,lb1,lb2,lb3,window):
          
          warn = tk.Label(window,text='CHECK YOUR USER NAME AND PASSWORD AGAIN', fg='red')
          warn.grid(row=1, column=4)
-   except Exception:
+   except Exception as er:
       
       is_ok = False
       
-      print(Exception)
+      print(er)
      
       warn = tk.Label(window,text='CHECK YOUR USER NAME AND PASSWORD AGAIN', fg='red')
       warn.grid(row=1, column=4)
