@@ -13,7 +13,7 @@ def settings(window):
 
 def f(window):
 
-    from buttons import set_buttons
+    from window_settings.buttons import set_buttons
 
     window.columnconfigure(0, weight=1)
     window.columnconfigure(1, weight=1)

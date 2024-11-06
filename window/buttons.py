@@ -1,5 +1,5 @@
 import tkinter as tk
-from handlers import *
+from handlers.handlers import *
 
 
 def set_buttons(window):

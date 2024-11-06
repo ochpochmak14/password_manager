@@ -1,5 +1,5 @@
 import tkinter as tk
-from window_settings import *
+from window_settings.window_settings import *
 
 
 def main():

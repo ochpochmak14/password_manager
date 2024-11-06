@@ -23,7 +23,7 @@ def signin_text_handler(e1, e2, btn1, btn2, lb1, lb2, lb3, window):
 
 def signup_text_handling(e1, e2, e3, btn1, btn2, lb1, lb2, lb3, window):
     from db_connect import db_connect
-    from handlers import main_menu
+    from handlers.handlers import main_menu
 
     global warn
     usn = str(e1.get())
