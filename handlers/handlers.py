@@ -22,6 +22,7 @@ def signin_handler(btn1, btn2, window):
 
     btn1.after(0, btn1.destroy)
     btn2.after(0, btn2.destroy)
+    
     name_label = tk.Label(window, text="User name")
     name_label.grid(row=2, column=3)
 
