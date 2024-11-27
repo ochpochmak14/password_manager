@@ -1,4 +1,6 @@
 import tkinter as tk
-
+from tkinter import ttk
 def create_table(window):
-    pass
+    tree = ttk.Treeview(window)
+    tree['columns'] = ["ID", "App", "Login", "Password"]
+    
