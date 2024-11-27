@@ -6,3 +6,6 @@ def delete(e1, e2, btn1, btn2, lb1, lb2, lb3, window):
     e2.after(0, e2.destroy)
     lb1.after(0, lb1.destroy)
     lb2.after(0, lb2.destroy)
+
+def delete_ret(ret):
+    ret.after(0, ret.destroy)

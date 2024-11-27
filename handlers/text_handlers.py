@@ -4,6 +4,8 @@ import tkinter as tk
 def signin_text_handler(e1, e2, btn1, btn2, lb1, lb2, lb3, window):
     from db_operations.db_connect import db_connect
     from handlers.delete import delete
+    from HEAD_PAGE_setting.set_buttons import set_but
+    
     
     usn = str(e1.get())
     usp = str(e2.get())
@@ -15,6 +17,7 @@ def signin_text_handler(e1, e2, btn1, btn2, lb1, lb2, lb3, window):
         table_data = cursor.fetchall()
         if usp == table_data[0][2]:
            delete(e1, e2, btn1, btn2, lb1, lb2, lb3, window)
+           set_but(btn1, btn2, window)
     except Exception as er:
         print(er)
         if connection:
